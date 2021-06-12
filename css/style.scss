@@ -1,0 +1,203 @@
+@font-face{
+    font-family: roots;
+    src: url('../statics/Roots.ttf');
+}
+body{
+    margin: 0;
+    background-image: url('../statics/bg.jpg');
+    background-attachment: fixed;
+    font-family: roots;
+}
+button,input[type="submit"]{
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background: #000;
+    color: #f44;
+    border: none;
+    margin: 0;
+}
+button:hover,button:focus,input[type="submit"]:hover,input[type="submit"]:focus{
+    opacity: 1;
+}
+a{
+    color: #44f;
+    text-decoration: none;
+}
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    a img{
+        width: 40px;
+        height: 40px;
+        border-radius: 1000px;
+    }
+}
+.categories-show{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 25px;
+}
+.categories{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: height 0.2s, width 0.2s;
+    background: #272424;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.9;
+    a{
+        cursor: pointer;
+        color: #fff;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        transition: background 0.16s, color 0.16s;
+    }
+    a:hover,a:focus{
+        background: #000;
+        color: #f44;
+    }
+}
+header{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    color: #f44;
+    box-shadow: 0 5px 5px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 175px;
+    }
+    form{
+        width: 100%;
+        margin: 10px 15px;
+        #search{
+            width: 80%;
+            height: 35px;
+            border-radius: 10px;
+        }
+        #searchbtn{
+            width: 40px;
+            height: 35px;
+            padding: 2px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+    }
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    .game{
+        text-align: center;
+        padding: 10px;
+        margin: 10px 5px;
+        border-radius: 15px;
+        background: #0009;
+        color: #fff;
+        overflow: auto;
+        flex: 300px;
+        .game-title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .game-rate{
+            float: left;
+        }
+        .game-logo{
+            width: 200px;
+        }
+        .game-categories{
+            float: left;
+        }
+        .game-view{
+            border-radius: 20px;
+            padding: 5px;
+            a{
+                color: #f44;
+            }
+        }
+        .game-company{
+            float: right;
+        }
+        .game-images{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            img{
+                width: 100%;
+                max-height: 500px;
+                margin: 5px;
+            }
+        }
+        .game-description{
+            width: 100%;
+            font-size: 19px;
+            span{
+                color: #f44;
+                font-size: 23px;
+            }
+            .game-download{
+                width: 100%;
+                border-radius: 10px;
+                color: #4f4;
+            }
+        }
+    }
+    .about{
+        font-size: 23px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        .contact{
+            font-size: 20px;
+            width: 40%;
+            margin: 10px;
+            display: block;
+            float: left;
+            img{
+                width: 50px;
+            }
+        }
+    }
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -5px 5px #000;
+    color: #fff;
+    a{
+        color: #f44;
+    }
+}
+@media screen and (min-width: 800px){
+    header{
+        flex-direction: row;
+        padding: 20px;
+        form{
+            width: 50%;
+        }
+    }
+    .container .game{
+        .game-images{
+            width: 50%;
+            float: left;
+        }
+        .game-description{
+            width: 50%;
+            float: right;
+        }
+    }
+}
